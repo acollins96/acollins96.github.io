@@ -9,26 +9,69 @@ html, body {
 
 body {
  display: flex;
- align-items: center;
  justify-content: center;
-}
-
-h1 {
- margin-bottom: 20px;
- font-size: 80px;
+ align-items: center;
 }
 
 nav {
- padding: 30px 50px 45px;
- border: 5px solid lightyellow;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ border-top: 7px solid lightyellow;
+ border-bottom: 7px solid lightyellow;
  font-weight: bold;
 }
 
 nav ul {
  display: flex;
- justify-content: space-around;
+ flex-direction: column;
+ align-items: center;
+}
+
+nav li {
+ margin-bottom: 30px;
 }
 
 nav li a {
- padding: 5px;
+ font-size: 30px;
+ padding: 10px;
+}
+
+h1 {
+ margin: 20px;
+ font-size: 80px;
+}
+
+.activenav {
+ border-bottom: solid 2px lightyellow;
+}
+
+@media screen and (min-width: 600px) {
+ nav {
+  display: block;
+  width: auto;
+  padding: 30px 50px 45px;
+  border: 5px solid lightyellow;
+ }
+
+ nav ul {
+  flex-direction: unset;
+  justify-content: space-around;
+ }
+
+ nav li {
+  margin: 0px;
+ }
+
+ nav li a {
+  font-size: medium;
+  padding: 5px;
+ }
+
+ h1 {
+  margin: 0px;
+  margin-bottom: 20px;
+ }
 }
